@@ -31,7 +31,8 @@ M.plugins = {
 			ensure_installed = {
         "black",
         "isort",
-        "pyright"
+        "pyright",
+        "solargraph"
 			},
 		},
     ["NvChad/ui"] = {
