@@ -1,3 +1,5 @@
+local override = require("custom.override")
+
 local M = {}
 
 M.plugins = {
@@ -24,14 +26,18 @@ M.plugins = {
     end,
     },
     ['tpope/vim-rails'] = {},
-    ['slim-template/vim-slim'] = {}
+    ['slim-template/vim-slim'] = {},
+    ['thalesmello/lkml.vim'] = {},
+    ['NoahTheDuke/vim-just'] = {},
+    ['RRethy/nvim-treesitter-endwise'] = {},
+    ['kdheepak/lazygit.nvim'] = {}
   },
   override = {
+    ["nvim-treesitter/nvim-treesitter"] = override.treesitter,
 		["williamboman/mason.nvim"] = {
 			ensure_installed = {
-        "black",
-        "isort",
-        "pyright",
+        "ruff",
+        "elixir-ls",
         "solargraph"
 			},
 		},
